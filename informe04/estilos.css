@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: serif;
+    line-height: 1.5;
+    background: url('img/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Cabecera */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border: 1px dashed #999;
+}
+
+.company-name {
+    font-size: 2rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #0056b3;
+}
+
+/* Slider */
+.slider-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background: #eee;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.slider-dots {
+    margin-top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Contenido Principal (Video y Párrafos) */
+.content-section {
+    display: flex;
+    gap: 30px;
+    padding: 30px 20px;
+}
+
+.columna-video {
+    flex: 1;
+}
+
+.columna-video iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 5px;
+}
+
+.columna-texto {
+    flex: 1;
+}
+
+.columna-texto h2 {
+    margin-bottom: 15px;
+}
+
+.columna-texto p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Sección inferior (Publicidad y Formulario) */
+.bottom-section {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+}
+
+.publicidad {
+    flex: 1;
+    height: 250px;
+    border: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+}
+
+.registro-container {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 30px;
+    background: #fff;
+}
+
+#registroForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#registroForm h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#registroForm input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.btn-enviar {
+    padding: 12px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #303f9f;
+}
+
+/* Pie de página */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background-color: #f1f1f1;
+}
+
+.footer-copy {
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.footer-social a:hover {
+    background-color: #007bff;
+}
+
+/* --- RESPONSIVE FLEXBOX (550px o menos) --- */
+@media screen and (max-width: 550px) {
+    .header {
+        align-items: center;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-section {
+        flex-direction: column;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+    }
+
+    .publicidad {
+        display: none;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-copy {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edson Walter - Rutas El Inti</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="cabecera">
+    <div class="logo">🏔️ Rutas El Inti</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#recomendaciones">Services</a>
+      <a href="contactos.html">Contacts</a>
+      <a href="#formulario">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Slide -->
+    <section class="slide" id="slide">
+      <div class="slide-item activo" style="background-image: url('img/slide1.jpg');"><span>Descubre el Perú</span></div>
+      <div class="slide-item" style="background-image: url('img/slide2.jpg');"><span>Aventura y cultura</span></div>
+      <div class="slide-item" style="background-image: url('img/slide3.jpg');"><span>Sabores del país</span></div>
+      <div class="slide-item" style="background-image: url('img/slide4.jpg');"><span>Viaja con nosotros</span></div>
+      <div class="puntos">
+        <span class="punto activo"></span>
+        <span class="punto"></span>
+        <span class="punto"></span>
+        <span class="punto"></span>
+      </div>
+    </section>
+
+    <!-- Recomendaciones -->
+    <section class="seccion" id="recomendaciones">
+      <h2>Recomendaciones</h2>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <div class="img"><img src="img/slide1.jpg" alt="Machu Picchu"></div>
+          <p>Machu Picchu</p>
+        </div>
+        <div class="tarjeta">
+          <div class="img"><img src="img/slide2.jpg" alt="Huacachina"></div>
+          <p>Huacachina</p>
+        </div>
+        <div class="tarjeta">
+          <div class="img"><img src="img/slide3.jpg" alt="Cañón del Colca"></div>
+          <p>Cañón del Colca</p>
+        </div>
+        <div class="tarjeta">
+          <div class="img"><img src="img/slide4.jpg" alt="Paracas"></div>
+          <p>Paracas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Noticias -->
+    <section class="seccion" id="noticias">
+      <h2>Noticias</h2>
+
+      <article class="noticia">
+        <div class="img grande"><img src="img/slide1.jpg" alt="Nuevo tren"></div>
+        <div class="texto">
+          <h3>Nuevo tren a Machu Picchu</h3>
+          <p>Se anunció un nuevo horario de trenes para que más viajeros puedan llegar a la ciudadela sin tantas esperas. Se recomienda reservar con anticipación.</p>
+        </div>
+      </article>
+
+      <article class="noticia invertida">
+        <div class="img grande"><img src="img/slide2.jpg" alt="Festival gastronómico"></div>
+        <div class="texto">
+          <h3>Festival gastronómico en Lima</h3>
+          <p>Este mes llega un festival con platos típicos de la costa, sierra y selva. Habrá degustaciones y presentaciones en vivo para toda la familia.</p>
+        </div>
+      </article>
+
+      <article class="noticia">
+        <div class="img grande"><img src="img/slide3.jpg" alt="Rutas de trekking"></div>
+        <div class="texto">
+          <h3>Rutas de trekking más seguras</h3>
+          <p>Las autoridades mejoraron la señalización en varias rutas de montaña. Igual conviene ir con guía y llevar ropa para el frío.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Formulario -->
+    <section class="seccion" id="formulario">
+      <h2>Formulario</h2>
+      <form id="formReserva" class="form">
+        <input type="text" id="nombre" placeholder="Ingrese Nombre" required>
+        <input type="email" id="correo" placeholder="Ingrese Correo" required>
+        <input type="tel" id="clave" placeholder="Ingrese Celular" required>
+        <button type="submit">Enviar</button>
+        <p id="mensaje"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="redes">
+      <span>RS1</span>
+      <span>RS2</span>
+      <span>RS3</span>
+    </div>
+    <p>Todos los derechos reservados &copy; 2026 por Edson Walter.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
